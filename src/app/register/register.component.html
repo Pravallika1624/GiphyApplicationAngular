@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body class="mainBody">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" style="color:orange; font-weight:bold;font-size:35px" routerLink=" "><i class="fa fa-magic"
+        aria-hidden="true"></i> GIPHER APP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a routerLink="/login" class="nav-link mx-4"> <i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/register" class="nav-link mx-4"> <i class="fa fa-pencil" aria-hidden="true"></i> Register</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h2 class="some" style="color:chocolate; text-align: center;margin-top: 100px;">Register New User</h2>
+  <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> You have successfully Registered.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">OK</span>
+    </button>
+  </div>
+  <fieldset class="recommendFieldset">
+
+    <form [formGroup]="register" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label>Id</label>
+        <input type="text" class="form-control" formControlName="id" id="id" placeholder="Enter User ID" [(ngModel)]="user.id" name="id" required/>
+        <span *ngIf="id.invalid" class="error">Id is required</span>
+        <br>
+
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email" id="email" placeholder="Enter User Email" [(ngModel)]="user.email"
+          name="email" required/>
+        <span *ngIf="email.invalid" class="error">Email is required</span>
+        <br>
+
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter User Name" [(ngModel)]="user.name"
+          name="name" required/>
+          <span *ngIf="name.invalid" class="error">Name is required</span>
+          <br>
+
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password" id="password" placeholder="Enter User Password"
+          [(ngModel)]="user.password" name="password" required/>
+          <span *ngIf="password.invalid" class="error">Password is required</span>
+
+          
+            
+            
+          
+
+      </div>
+      <button class = "btn btn-primary" type="submit">Submit</button>
+    </form>
+
+  </fieldset>
+  <br>
+  <br>
+</body>
+
+</html>

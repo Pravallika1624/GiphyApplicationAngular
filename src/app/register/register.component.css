@@ -1,0 +1,56 @@
+input.ng-invalid{
+    border-left:5px solid red;
+}
+input.ng-valid{
+    border-left:5px solid green;
+}
+.error{
+    color:red;
+}
+.recommendFieldset{
+    margin-left:35%;
+    margin-top: 2%;
+    margin-right: 30%;
+    background-color: whitesmoke;
+    border: 2px;
+    border-style: solid ;
+    border-color: black ;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    border-radius: 5px;
+    
+}
+
+.button01{
+    background-color: black;
+}
+
+.buttondiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-control{
+    background-color:whitesmoke;
+    width: 90%;
+}
+
+.label1{
+    font-family: 'Squada One', cursive;
+}
+
+body{
+    margin: 0px;
+    top: 0;
+}
+
+nav{
+   
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+
+}

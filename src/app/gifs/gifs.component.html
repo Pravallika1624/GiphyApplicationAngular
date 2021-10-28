@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" style="color:orange; font-weight:bold;font-size:35px" routerLink=" "> <i class="fa fa-magic" aria-hidden="true"></i>GIPHER APP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ">
+       
+        <li class="nav-item">
+          <a routerLink="/login" class="nav-link mx-4"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/register" class="nav-link mx-4"> <i class="fa fa-pencil" aria-hidden="true"></i> Register</a>
+        </li>
+               
+      </ul>
+    </div>
+  </nav>
+<div class="gifs">
+    <div class="gif" *ngFor="let gif of gifs">
+    <img [src]="gif.images.downsized.url" alt="Image">
+  </div>
+</div>

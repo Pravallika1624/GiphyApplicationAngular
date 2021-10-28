@@ -1,0 +1,25 @@
+.cardCenter{
+    margin-top:60px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+img{
+    width: 300px;
+    height:250px;
+}
+
+body{
+    margin: 0px;
+    top: 0;
+}
+
+nav{
+   
+    overflow: hidden;
+    background-color: #333;
+    position: absolute; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+
+}

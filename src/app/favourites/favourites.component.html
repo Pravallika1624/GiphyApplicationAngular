@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Features</a>
+        <a class="nav-item nav-link" href="#">Pricing</a>
+        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" style="color:orange; font-weight:bold;font-size:35px" routerLink=" "> <i class="fa fa-magic"
+        aria-hidden="true"></i> GIPHER APP</a>
+    <a class="navbar-brand" style="color:orange; font-weight:bold;font-size:35px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <form class="form-inline my-2 my-lg-0">
+          <div class="container">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link mx-4" routerLink="/dashboard"><i class="fa fa-hashtag" aria-hidden="true"></i>
+                  Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-4" routerLink="/favourite"> <i class="fa fa-heart-o" aria-hidden="true"></i>
+                  Favourite</a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/recommend" class="nav-link mx-4"><i class="fa fa-check" aria-hidden="true"></i> Recomend
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/search" class="nav-link mx-4"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
+              </li>
+              <li class="nav-item logoutMargin">
+                <a routerLink="/edit" class="nav-link mx-4"><i class="fa fa-pencil" aria-hidden="true"></i> Profile</a>
+              </li>
+              <li class="nav-item logoutMargin">
+                <a routerLink="/login" class="nav-link mx-4"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                  Logout</a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </ul>
+    </div>
+  </nav>
+  <h2 class="some" style="color:chocolate; font-weight:600; text-align: center; margin-top: 100px;"> Favourites </h2>
+
+
+  <div class="gifs">
+  
+    <div class="gif" *ngFor="let i of fav_list">
+
+      <img [src]="i.url" alt="Image">
+
+      <div class="text-center class01">
+        <a class="m-2" (click)="DeleteResto(i.id)"> <button class="btn btn-primary"
+            style="background-color: black;">Unfavourite</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
